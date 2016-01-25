@@ -1,1 +1,4 @@
 # koala
+
+The main differences between Koa and Express are based on their relationship to node.js.
+Where Express tries to keep, but simplify, a lot of functionality similar to vanilla HTTP node, Koa takes a different outlook on the situation. It does it by using "generator" functions. This is Koa's method of handling asynchronous callbacks. A generator function does not actually get called until the object it returns (the iterator) has its "next" function called. Inside these generator functions, you can call the "yield" command before any asynchronous function, and that basically means that the entire function stops and waits for that chosen function to finish running before continuing on the next line of code. This makes handling async calls a lot simpler, and you won't have to next callback inside callback inside callback.
